@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body{
+  background-color: #EAEAEA;
+  font-family: 'Montserrat',Sans-Serif;
+  font-size:14px;
+}
+
+.header{
+  height:60px;
+}
+
+.image{
+  padding-top:5px;
+  padding-bottom:5px;
+  background-color:#F1F1F1;
+  position:relative;
+}
+
+.ellipsis-alignment{
+  position:absolute;
+  top:30px;
+  right:30px;
+}
+
+.fa-ellipsis-v:before {
+    content: "\f142";
+    color:  rgb(97, 97, 97);
+    cursor:pointer;
+}
+
+.online{
+  width:10px;
+  height:10px;
+  background-color:green;
+  border-radius:10px;
+  position:absolute;
+  top:80px;
+  right:108px;
+  
+}
+img{
+  border-radius:50px;
+}
+
+li{
+  cursor:pointer;
+  display: flex;
+  align-items: center;
+  position:relative;
+  padding:3px;
+}
+
+.active,li:hover{
+  background-color:#F1F1F1;
+  color:rgb(186, 135, 126);
+}
+
+.fas{
+  cursor:pointer;
+}
+
+.nav{
+  background-color:white;  
+}
+
+.col-sm-8{
+   background-color:#F1F1F1;
+}
+
+.bold{
+  font-weight:bold;
+  height:50px;
+  background-color:#F1F1F1;
+  padding-left:30px;
+  display:flex;
+  align-items:center;
+}
+
+.grid{
+  padding-left:30px;
+  padding-right:30px;
+  background-color:white;
+}
+
+.schedular-height{
+ padding: 5px;
+    text-align: center;
+    border-radius: 2px;
+    background: #e0e0e0;
+    border: 1px solid #ccc;
+  }
+
+.first-schedule{
+  background-color:#FADCDC;
+  border:1px solid rgb(228, 196, 201);
+}
+
+.second-schedule{
+  background-color:rgb(226, 223, 234);
+  border:1px solid rgb(183, 178, 201);
+}
+
+.third-schedule{
+  background-color:rgb(225, 251, 224);
+  border:1px solid rgb(155, 185, 157);
+}
+
+.schedular-alignment{
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+.user-info-alignment{
+  padding-right:10px;
+  padding-left:10px;
+}
+
+.side-nav-icons{
+  padding-right:10px;
+}
+
+.chevron-right-alignmment{
+  position:absolute;
+  right: 15px;
+  top: 20px;
+}

@@ -1,23 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import Login from './components/Login';
+ import Footer from './components/Footer';
+import Cover from './components/Cover';
+import Register from './components/Register';
+import TaskSchedular from './components/TaskSchedular';
+import { BrowserRouter as Router, Route,Redirect } from 'react-router-dom';
+import Schedular from './components/schedular';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       
+      {/* <Login></Login> */}
+     
+      
+     <Router>
+     <Header></Header>
+     {/* <Redirect to="/Cover" path="/">
+</Redirect> */}
+     <Route component={Login} path={'/Login'} ></Route>
+     <Route component={Register} path={'/Register'} ></Route>
+     <Route component={TaskSchedular} path={'/TaskSchedular'} ></Route>
+     <Route component={Cover} path={'/Cover'} ></Route>
+     <Route component={Schedular} path={'/schedule'} ></Route>
+     
+     </Router>
+     <Footer></Footer> 
     </div>
   );
 }
