@@ -18,6 +18,7 @@
     "react-scripts": "4.0.3",
     "socket.io-client": "^4.2.0",
     "sweetalert2": "^11.1.4",
+    "touch-action": "^1.0.1",
     "web-vitals": "^1.1.2"
   },
   "scripts": {

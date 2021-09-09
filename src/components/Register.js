@@ -44,53 +44,27 @@ const Signup = () => {
 
             })
     }
+    
 
     return (
         
-        <div className="col-md-6 mx-auto">
-            <div className="card1">
-                <div className="card-body">
-
-                    <div className="row">
-                        <div className="col-md-5"></div>
-                        <div className="col-md-5">
-
-                            <Formik
-                                initialValues={signupform}
-                                onSubmit={formSubmit}
-                            >
-                                {({
-                                    values,
-                                    handleChange,
-                                    handleSubmit
-                                }) => (
-                                    <form onSubmit={handleSubmit}>
-
-                                        <label className="mt-5">Name</label>
-                                        <input className="form-control" onChange={handleChange} value={values.name} name="name" />
-
-                                        <label className="mt-5">Email</label>
-                                        <input className="form-control" onChange={handleChange} value={values.email} name="email" />
-
-                                        <label className="mt-5">Mobile No.</label>
-                                        <input className="form-control" type="number" onChange={handleChange} value={values.mobile} name="mobile" />
-
-                                        <label className="mt-5">Address</label>
-                                        <textarea className="form-control" rows="5" onChange={handleChange} value={values.address} name="address" ></textarea>
-
-                                        <label className="mt-5">Password</label>
-                                        <input className="form-control" type="password" onChange={handleChange} value={values.password} name="password" />
-
-                                        <button type="submit" className="btn btn-primary mt-5">Submit</button>
-                                    </form>
-                                )}
-                            </Formik>
-
-                        </div>
-                    </div>
-
-                </div>
+        // <div className='bold-line'></div>
+        <div className='container'>
+          <div className='window'>
+            <div className='overlay'></div>
+            <div className='content'>
+              <div className='welcome'>Hello There!</div>
+              <div className='subtitle'>We're almost done. Before using our services you need to create an account.</div>
+              <div className='input-fields'>
+                <input type='text' placeholder='Username' className='input-line full-width'></input>
+                <input type='email' placeholder='Email' className='input-line full-width'></input>
+                <input type='password' placeholder='Password' className='input-line full-width'></input>
+        
+              </div>
+              <div className='spacing'>or continue with <span className='highlight'>Facebook</span></div>
+              <div><button className='ghost-round full-width'>Create Account</button></div>
             </div>
+          </div>
         </div>
     )
 }
