@@ -5,7 +5,8 @@ import '../stylesheets/Login.css';
 import { Formik } from 'formik';
 import app_config from '../config';
 import Swal from 'sweetalert2';
-
+import Schedular from './schedular';
+import { BrowserRouter, Link } from 'react-router-dom';
 const myStyles = makeStyles(() => ({
     mycard: {
         marginTop: '10rem',
@@ -40,7 +41,7 @@ const Login = () => {
                         })
 
                         sessionStorage.setItem('user', JSON.stringify(data));
-                        window.location.replace('/product');
+                        window.location.replace('/schedular');
 
                         return
                     }
@@ -63,20 +64,33 @@ const Login = () => {
         <div id="wrapper">
       <div id="left">
         <div id="signin">
-          <div className="logo">
-            <img src="https://image.ibb.co/hW1YHq/login-logo.png" alt="Sluralpright" />
-          </div>
-          <form>
+          {/* <div className="logo">
+            <img src="https://rgs.health.wa.gov.au/_layouts/15/HDWA.RGS.SharePoint/img/loginIcon.png" alt="Sluralpright" />
+          </div> */}
+           <Formik
+                            initialValues={loginform}
+                            onSubmit={formSubmit}
+                        >{({
+                            values,
+                            handleChange,
+                            handleSubmit
+                        }) => (
+          
+          <form onSubmit={handleSubmit}>
             <div>
               <label>Email or username</label>
-              <input type="text" className="text-input" />
+              <input className="form-control" onChange={handleChange} value={values.email} name="email" />
             </div>
             <div>
               <label>Password</label>
-              <input type="password" className="text-input" />
+              <input className="form-control" onChange={handleChange} value={values.password} type="password" name="password" />
             </div>
             <button type="submit" className="primary-btn">Sign In</button>
           </form>
+           )}
+
+
+           </Formik>
           <div className="links">
             <a href="#">Forgot Password</a>
             <a href="#">Sign in with company or school</a>
@@ -86,7 +100,7 @@ const Login = () => {
             <span>OR</span>
             <hr className="bar" />
           </div>
-          <a href="#" className="secondary-btn">Create an account</a>
+          <Link to="/Register" className="secondary-btn">Create an account</Link>
         </div>
         <footer id="main-footer">
           <p>Copyright &copy; 2018, Sluralpright All Rights Reserved</p>

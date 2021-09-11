@@ -103,7 +103,7 @@ button:focus {
   margin-top: 25px;
 }
 
-.container {
+.container1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -118,6 +118,9 @@ button:focus {
   justify-content: center;
   background:none;
   height: 100%;
+  width: 100%;
+  margin-top: 5%;
+  margin-bottom: 13%;
 }
 
 .content {

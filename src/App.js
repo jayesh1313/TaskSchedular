@@ -17,16 +17,15 @@ function App() {
       
      <Router>
      <Header></Header>
-     {/* <Redirect to="/Cover" path="/">
-</Redirect> */}
+     
      <Route component={Login} path={'/Login'} ></Route>
      <Route component={Register} path={'/Register'} ></Route>
      {/* <Route component={TaskSchedular} path={'/TaskSchedular'} ></Route> */}
      <Route component={Cover} path={'/Cover'} ></Route>
      <Route component={Schedular} path={'/schedule'} ></Route>
-     
      </Router>
      <Footer></Footer> 
+     
     </div>
   );
 }

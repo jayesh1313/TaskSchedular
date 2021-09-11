@@ -9,8 +9,6 @@ const Signup = () => {
     const signupform = {
         name: '',
         email: '',
-        mobile: '',
-        address: '',
         password: ''
     }
 
@@ -49,20 +47,34 @@ const Signup = () => {
     return (
         
         // <div className='bold-line'></div>
-        <div className='container'>
-          <div className='window'>
+        <div className='container1 mx-auto'>
+          <div className='window '>
             <div className='overlay'></div>
             <div className='content'>
               <div className='welcome'>Hello There!</div>
               <div className='subtitle'>We're almost done. Before using our services you need to create an account.</div>
               <div className='input-fields'>
-                <input type='text' placeholder='Username' className='input-line full-width'></input>
-                <input type='email' placeholder='Email' className='input-line full-width'></input>
-                <input type='password' placeholder='Password' className='input-line full-width'></input>
-        
+              <Formik
+                                initialValues={signupform}
+                                onSubmit={formSubmit}
+                            >
+                                {({
+                                    values,
+                                    handleChange,
+                                    handleSubmit
+                                }) => (
+                                    <form onSubmit={handleSubmit}>
+                <input className="form-control" onChange={handleChange} value={values.name} name="name"placeholder="Username" />
+                <input className="form-control" onChange={handleChange} value={values.email} name="email"placeholder="Email" />
+                <input className="form-control" type="password" onChange={handleChange} value={values.password} name="password"placeholder="password" />
+                <button className='ghost-round full-width'>Create Account</button>
+                </form>
+                                )}
+                            </Formik>
+
               </div>
               <div className='spacing'>or continue with <span className='highlight'>Facebook</span></div>
-              <div><button className='ghost-round full-width'>Create Account</button></div>
+              {/* <div></div> */}
             </div>
           </div>
         </div>

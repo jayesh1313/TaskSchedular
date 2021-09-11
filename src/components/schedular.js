@@ -1,4 +1,4 @@
-import { Appointments, AppointmentTooltip, DayView, Scheduler } from '@devexpress/dx-react-scheduler-material-ui';
+import { AppointmentForm, Appointments, AppointmentTooltip, DayView, Scheduler } from '@devexpress/dx-react-scheduler-material-ui';
 import Paper from '@material-ui/core/Paper';
 
 const Schedular = () => {
@@ -259,9 +259,15 @@ const Schedular = () => {
         endDayHour={13}
       />
       <Appointments />
-      <AppointmentTooltip />
+      <AppointmentTooltip
+            showCloseButton
+            showOpenButton
+          />
+          <AppointmentForm
+          />
     </Scheduler>
   </Paper>
+  
     )
 }
 export default Schedular;
