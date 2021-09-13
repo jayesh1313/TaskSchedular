@@ -1,5 +1,8 @@
-import { Appointments, AppointmentTooltip, DayView, Scheduler } from '@devexpress/dx-react-scheduler-material-ui';
+import { AppointmentForm, Appointments, AppointmentTooltip, ConfirmationDialog, DayView, Scheduler } from '@devexpress/dx-react-scheduler-material-ui';
 import Paper from '@material-ui/core/Paper';
+import { ViewState, EditingState, IntegratedEditing, MonthView } from '@devexpress/dx-react-scheduler';
+import { useEffect, useState } from 'react';
+import { FormControlLabel, Radio, RadioGroup } from '@material-ui/core';
 
 const Schedular = () => {
 
@@ -248,6 +251,65 @@ const Schedular = () => {
     },
   ];
 
+  const [currentApp, setCurrentApp] = useState({
+    data: appointments,
+    currentDate: '2018-06-27',
+    currentViewName: 'Month'
+  })
+
+
+  useEffect(() => {
+
+  }, [])
+
+  const ExternalViewSwitcher = ({
+    currentViewName,
+    onChange,
+  }) => (
+    <RadioGroup
+      aria-label="Views"
+      style={{ flexDirection: 'row' }}
+      name="views"
+      value={currentViewName}
+      onChange={onChange}
+    >
+      <FormControlLabel value="Week" control={<Radio />} label="Week" />
+      <FormControlLabel value="Work Week" control={<Radio />} label="Work Week" />
+      <FormControlLabel value="Month" control={<Radio />} label="Month" />
+    </RadioGroup>
+  );
+
+  const commitChanges = ({ added, changed, deleted }) => {
+
+    let data = currentApp.data;
+    if (added) {
+      const startingAddedId = data.length > 0 ? data[data.length - 1].id + 1 : 0;
+      data = [...data, { id: startingAddedId, ...added }];
+
+      setCurrentApp({
+        data: appointments,
+        currentDate: '2018-06-27',
+      });
+
+    }
+    // console.log('here');
+    // console.log(currentApp);
+    return;
+    setCurrentApp((state) => {
+      let { data } = state;
+      if (added) {
+
+      }
+      if (changed) {
+        data = data.map(appointment => (
+          changed[appointment.id] ? { ...appointment, ...changed[appointment.id] } : appointment));
+      }
+      if (deleted !== undefined) {
+        data = data.filter(appointment => appointment.id !== deleted);
+      }
+      return { data };
+    });
+  }
 
   return (
     <Paper>
@@ -258,10 +320,29 @@ const Schedular = () => {
           startDayHour={8}
           endDayHour={13}
         />
+        <ViewState
+          currentDate={currentApp.currentDate}
+        />
+        <EditingState
+          onCommitChanges={commitChanges}
+        />
+        <IntegratedEditing />
+        <DayView
+          startDayHour={9}
+          endDayHour={19}
+        />
+        <MonthView />
+        <ConfirmationDialog />
         <Appointments />
-        <AppointmentTooltip />
+        <AppointmentTooltip
+          showCloseButton
+          showOpenButton
+        />
+        <AppointmentForm
+        />
       </Scheduler>
     </Paper>
+
   )
 }
 export default Schedular;

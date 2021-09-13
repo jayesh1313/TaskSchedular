@@ -1,23 +1,17 @@
 import React from 'react'
+import '../stylesheets/Cover.css'
 import { BrowserRouter, Link } from 'react-router-dom';
-import '../stylesheets/Cover.css';
 export default function Cover() {
-    return (
-        <div className="by">
-        
-      
-
-  <main className="px-3 mx-auto">
-    <h1 className="abc">Task Schedular.</h1>
-    <div className="lead1">
-    <p className="lead">Welcome To Task Schedular.</p>
-    <p className="lead">Schedule u r task don't misssed u r important work.</p>
-    </div>
+  return (
     
-  </main>
+   
+  <header className="showcase">
+  <div className="container showcase-inner">
+    <h1>Welcome To Task Schedular </h1>
+    {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas maiores sint impedit delectus quam molestiae explicabo cum facere ratione veritatis.</p>
+    <a href="#" className="btn">Read More</a> */}
+  </div>
+</header>  
 
- 
-</div>
-        
-    )
+  )
 }
