@@ -24,7 +24,7 @@ function App() {
      <Route component={Cover} path={'/Cover'} ></Route>
      <Route component={Schedular} path={'/schedule'} ></Route>
      </Router>
-     <Footer></Footer> 
+     {/* <Footer></Footer>  */}
      
     </div>
   );

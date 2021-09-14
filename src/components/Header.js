@@ -16,7 +16,7 @@ export default function Header() {
                     <Link className="nav-link" to="/product">Product</Link>
                 </li> */}
                 <li className="nav-item">
-                    <Link className="nav-link" to="/schedular">schedular</Link>
+                    <Link className="nav-link" to="/schedulae">schedular</Link>
                 </li>
                 <li className="nav-item">
                     <button onClick={logout} className="btn btn-danger">Logout</button>
