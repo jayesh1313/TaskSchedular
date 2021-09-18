@@ -16,7 +16,7 @@ export default function Header() {
                     <Link className="nav-link" to="/product">Product</Link>
                 </li> */}
                 <li className="nav-item">
-                    <Link className="nav-link" to="/schedulae">schedular</Link>
+                    <Link className="nav-link" to="/schedule">schedular</Link>
                 </li>
                 <li className="nav-item">
                     <button onClick={logout} className="btn btn-danger">Logout</button>
@@ -48,7 +48,7 @@ export default function Header() {
               <li><Link className="nav-link" to="/Cover">Home</Link></li>
               <li><Link className="nav-link" to="/Login">Login</Link></li>
               <li><Link className="nav-link" to="/Register">Register</Link></li>
-              <li><Link className="nav-link" to="/schedular">Schedular</Link></li>
+              <li><Link className="nav-link" to="/schedule">Schedular</Link></li>
             </ul>
           </div>
         </div>

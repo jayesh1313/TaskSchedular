@@ -1,19 +1,59 @@
 /* CORE STYLES */
-:root {
-    --primary-color: rgba(6, 8, 1, 0.178);
-    --overlay-color: rgba(35, 14, 151, 0.979);
-    --menu-speed: 0.75s;
+/* import url(https://fonts.googleapis.com/css?family=Anonymous+Pro); */
+
+html {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+body {
+  height: calc(100vh - 8em);
+  padding: 4em;
+  color: rgba(0, 0, 0, 0.904);
+  font-family: "Anonymous Pro", monospace;
+  background-color: rgba(25, 25, 25);
+}
+
+.line {
+  position: relative;
+  top: 50%;
+  width: 17em;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  font-size: 180%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+}
+
+.anim-typewritter {
+  animation: typewritter 4s steps(40) 1s 1 normal both,
+    blinkTextCursor 500ms steps(40) infinite normal;
+}
+
+@keyframes typewritter {
+  from {
+    width: 0;
   }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  to {
+    width: 17em;
   }
-  
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
   body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.4;
+    background: url('../img/hp.png') no-repeat center center/cover
   }
   
   .container {
@@ -33,7 +73,7 @@
   .showcase:before {
     content: '';
     /* background: url('https://images.pexels.com/photos/533923/pexels-photo-533923.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center center/cover; */
-    background: url('https://www.incimages.com/uploaded_files/image/1920x1080/getty_664975134_2000143320009280505_404015.jpg') no-repeat center center/cover;
+  ;
     position: absolute;
     top: 0;
     left: 0;

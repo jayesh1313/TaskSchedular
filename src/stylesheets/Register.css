@@ -215,3 +215,7 @@ button:focus {
     height: 100%;
   }
 }
+.container1{
+  background: url('../img/rp.png') no-repeat;
+
+}

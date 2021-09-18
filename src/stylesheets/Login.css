@@ -24,6 +24,10 @@ h6 {
 #wrapper {
   display: flex;
   flex-direction: row;
+  background: url('../img/lp.png') no-repeat;
+  height:100vh;
+  width:100%;
+ 
 }
 
 #left {
@@ -122,7 +126,7 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url('https://image.ibb.co/cO9Lxq/login-bg.jpg') no-repeat center center / cover;
+  background: url('../img/lp.png') no-repeat center center/cover;
   height: 100vh;
   text-align: center;
 }
@@ -229,4 +233,13 @@ h6 {
   #main-footer {
     padding-top: 1rem;
   }
+}
+.bg1{
+  background: url('../img/lp.png') no-repeat;
+  height: 50%;
+  width: 100%;
+}
+.container{
+  width: 100em;
+  height: 100;
 }

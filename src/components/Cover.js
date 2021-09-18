@@ -1,17 +1,27 @@
 import React from 'react'
 import '../stylesheets/Cover.css'
-import { BrowserRouter, Link } from 'react-router-dom';
-export default function Cover() {
-  return (
-    
-   
-  <header className="showcase">
-  <div className="container showcase-inner">
-    <h1>Welcome To Task Schedular </h1>
-    {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas maiores sint impedit delectus quam molestiae explicabo cum facere ratione veritatis.</p>
-    <a href="#" className="btn">Read More</a> */}
-  </div>
-</header>  
+import { BrowserRouter, Link,TypeWritter } from 'react-router-dom';
 
+export default function Cover() {
+ 
+  return (
+   
+
+<div >
+
+
+<body>
+  <audio id="clack" autoplay>
+    <source src="https://freesound.org/data/previews/331/331656_5825863-lq.mp3" type="audio/mpeg"/>
+  
+  </audio>
+ 
+  <h1 class="line anim-typewritter">Welcome To TasK Schedular</h1>
+</body>
+</div>
+
+
+
+  
   )
 }

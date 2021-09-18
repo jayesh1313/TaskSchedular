@@ -41,7 +41,7 @@ const Login = () => {
                         })
 
                         sessionStorage.setItem('user', JSON.stringify(data));
-                        window.location.replace('/schedular');
+                        window.location.replace('/schedule');
 
                         return
                     }
@@ -60,8 +60,20 @@ const Login = () => {
     
 
     return (
+      
+     <div className="container">
 
-        <div id="wrapper">
+
+<body>
+  <audio id="clack" autoplay>
+    <source src="https://freesound.org/data/previews/331/331656_5825863-lq.mp3" type="audio/mpeg"/>
+  
+  </audio>
+ 
+ <h1 className="bg1"> <h1 class="line anim-typewritter">Login Now</h1></h1>
+</body>
+
+        <div id="wrapper" mx-auto>
       <div id="left">
         <div id="signin">
           {/* <div className="logo">
@@ -110,16 +122,17 @@ const Login = () => {
         </footer>
       </div>
       <div id="right">
-        <div id="showcase">
+        {/* <div id="showcase">
           <div className="showcase-content">
-            <h1 className="showcase-text">
+            {/* <h1 className="showcase-text">
               Let's create the future <strong>together</strong>
-            </h1>
-            <a href="#" className="secondary-btn">Start a FREE 10-day trial</a>
-          </div>
-        </div>
+            </h1> */}
+            {/* <a href="#" className="secondary-btn">Start a FREE 10-day trial</a> */}
+          {/* </div>
+        </div> */} 
       </div>
     </div>
+</div>
         
     )
 }

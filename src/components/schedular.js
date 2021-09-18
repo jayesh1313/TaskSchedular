@@ -1,8 +1,7 @@
-import { AppointmentForm, Appointments, AppointmentTooltip, ConfirmationDialog, DayView, Scheduler } from '@devexpress/dx-react-scheduler-material-ui';
-import Paper from '@material-ui/core/Paper';
-import { ViewState, EditingState, IntegratedEditing, MonthView } from '@devexpress/dx-react-scheduler';
 import { useEffect, useState } from 'react';
-import { FormControlLabel, Radio, RadioGroup } from '@material-ui/core';
+import { FormControlLabel, Paper, Radio, RadioGroup } from '@material-ui/core';
+import { Appointments, DayView, MonthView, Scheduler, Toolbar, ViewSwitcher, WeekView } from '@devexpress/dx-react-scheduler-material-ui';
+import { ViewState } from '@devexpress/dx-react-scheduler';
 
 const Schedular = () => {
 
@@ -287,7 +286,7 @@ const Schedular = () => {
 
   const commitChanges = ({ added, changed, deleted }) => {
 
-    let {data} = currentApp.data;
+    
     if (added) {
       const startingAddedId = data.length > 0 ? data[data.length - 1].id + 1 : 0;
       data = [...data, { id: startingAddedId, ...added }];
@@ -317,39 +316,39 @@ const Schedular = () => {
     });
   }
 
+  let {data} = currentApp;
+
   return (
     <Paper>
-      <Scheduler
-        data={appointments}
-      >
-        <DayView
-          startDayHour={8}
-          endDayHour={13}
-        />
-        <ViewState
+        <Scheduler
+          data={data}
+          height={660}
+        >
+          <ViewState
             defaultCurrentDate="2018-07-25"
             currentViewName={currentViewName}
             onCurrentViewNameChange={currentViewNameChange}
           />
-        <EditingState
-          onCommitChanges={commitChanges}
-        />
-        <IntegratedEditing />
-        <DayView
-          startDayHour={9}
-          endDayHour={19}
-        />
-        <MonthView />
-        <ConfirmationDialog />
-        <Appointments />
-        <AppointmentTooltip
-          showCloseButton
-          showOpenButton
-        />
-        <AppointmentForm
-        />
-      </Scheduler>
-    </Paper>
+
+          <WeekView
+            startDayHour={10}
+            endDayHour={19}
+          />
+          <WeekView
+            name="work-week"
+            displayName="Work Week"
+            excludedDays={[0, 6]}
+            startDayHour={9}
+            endDayHour={19}
+          />
+          <MonthView />
+          <DayView />
+
+          <Toolbar />
+          <ViewSwitcher />
+          <Appointments />
+        </Scheduler>
+      </Paper>
 
   )
 }
