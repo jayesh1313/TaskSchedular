@@ -26,7 +26,7 @@ h6 {
   flex-direction: row;
   background: url('../img/lp.png') no-repeat;
   height:100vh;
-  width:100%;
+  /* width:100%; */
  
 }
 

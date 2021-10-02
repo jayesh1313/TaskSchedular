@@ -7,10 +7,11 @@ import Register from './components/Register';
 // import TaskSchedular from './components/TaskSchedular';
 import { BrowserRouter as Router, Route,Redirect } from 'react-router-dom';
 import Schedular from './components/schedular';
+import addappointment from './components/addappointment';
 
 function App() {
   return (
-    <div className="App">
+    <div>
        
       {/* <Login></Login> */}
      
@@ -23,6 +24,7 @@ function App() {
      {/* <Route component={TaskSchedular} path={'/TaskSchedular'} ></Route> */}
      <Route component={Cover} path={'/Cover'} ></Route>
      <Route component={Schedular} path={'/schedule'} ></Route>
+     <Route component={addappointment} path={'/addappointment'} ></Route>
      </Router>
      {/* <Footer></Footer>  */}
      

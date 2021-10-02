@@ -7,7 +7,7 @@ export default function Cover() {
   return (
    
 
-<div >
+<div className="kbc" >
 
 
 <body>
@@ -16,7 +16,7 @@ export default function Cover() {
   
   </audio>
  
-  <h1 class="line anim-typewritter">Welcome To TasK Schedular</h1>
+  <h1  class="line anim-typewritter">Welcome To TasK Schedular</h1>
 </body>
 </div>
 

@@ -19,6 +19,9 @@ export default function Header() {
                     <Link className="nav-link" to="/schedule">schedular</Link>
                 </li>
                 <li className="nav-item">
+                    <Link className="nav-link" to="/addappointment">Add Appointment</Link>
+                </li>
+                <li className="nav-item">
                     <button onClick={logout} className="btn btn-danger">Logout</button>
                 </li>
             </>
@@ -49,6 +52,9 @@ export default function Header() {
               <li><Link className="nav-link" to="/Login">Login</Link></li>
               <li><Link className="nav-link" to="/Register">Register</Link></li>
               <li><Link className="nav-link" to="/schedule">Schedular</Link></li>
+              <li><Link className="nav-link" to="/Login">Logout</Link></li>
+             <li> <Link className="nav-link" to="/addappointment">Add Appointment</Link></li>
+
             </ul>
           </div>
         </div>

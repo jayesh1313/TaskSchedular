@@ -61,19 +61,9 @@ const Login = () => {
 
     return (
       
-     <div className="container">
+    
 
-
-<body>
-  <audio id="clack" autoplay>
-    <source src="https://freesound.org/data/previews/331/331656_5825863-lq.mp3" type="audio/mpeg"/>
-  
-  </audio>
- 
- <h1 className="bg1"> <h1 class="line anim-typewritter">Login Now</h1></h1>
-</body>
-
-        <div id="wrapper" mx-auto>
+        <div id="wrapper">
       <div id="left">
         <div id="signin">
           {/* <div className="logo">
@@ -132,7 +122,7 @@ const Login = () => {
         </div> */} 
       </div>
     </div>
-</div>
+
         
     )
 }
