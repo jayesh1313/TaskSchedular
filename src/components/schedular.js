@@ -6,13 +6,26 @@ import app_config from '../config';
 
 const Schedular = () => {
 
-  const [appointments, setAppointments] = useState([]);
+  const [appointments, setAppointments] = useState([
+    {
+    title: 'Recall Rebate Form',
+    priorityId: 2,
+    startDate: '2021-10-17T09:30',
+    endDate: '2021-10-17T10:00',
+  },
+  {
+    title: 'Create Report on Customer Feedback',
+    priorityId: 2,
+    startDate: '2018-04-17T10:30',
+    endDate: '2018-04-17T12:00',
+  },
+]);
   const url = app_config.api_url;
 
   const [currentApp, setCurrentApp] = useState({
     data: appointments,
-    currentDate: '2018-06-27',
-    currentViewName: 'work-week'
+    currentDate: new Date(),
+    currentViewName: 'Month'
   })
 
   const { currentViewName } = currentApp;
@@ -26,7 +39,14 @@ const Schedular = () => {
       .then(res => res.json())
       .then(data => {
         console.log(data);
+        
         setAppointments(data);
+        
+        setCurrentApp({
+          data: appointments,
+          currentDate: new Date(),
+          currentViewName: 'Month'
+        })
       })
 
   }

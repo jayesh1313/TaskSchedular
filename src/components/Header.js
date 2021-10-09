@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Link } from 'react-router-dom';
+import '../stylesheets/Header.css'
 export default function Header() {
   const currentUser = sessionStorage.getItem('user');
 
@@ -7,6 +8,7 @@ export default function Header() {
         sessionStorage.removeItem('user');
         window.location.replace('/login');
     }
+    
 
     const showLoggedIn = () => {
 
@@ -40,30 +42,37 @@ export default function Header() {
 
     return (
       
-    <body>
-    <div className="menu-wrap">
-      <input type="checkbox" className="toggler"/>
-      <div className="hamburger"><div></div></div>
-      <div className="menu">
-        <div>
-          <div>
-            <ul>
-              <li><Link className="nav-link" to="/Cover">Home</Link></li>
-              <li><Link className="nav-link" to="/Login">Login</Link></li>
-              <li><Link className="nav-link" to="/Register">Register</Link></li>
-              <li><Link className="nav-link" to="/schedule">Schedular</Link></li>
-              <li><Link className="nav-link" to="/Login">Logout</Link></li>
-             <li> <Link className="nav-link" to="/addappointment">Add Appointment</Link></li>
-
-            </ul>
-          </div>
-        </div>
+      <nav class="navbar navbar-expand-custom navbar-mainbg">
+      <a class="navbar-brand navbar-logo" href="#">Task Schedular</a>
+      <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars text-white"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+              <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+              <li class="nav-item">
+                  <Link class="nav-link" href="javascript:void(0);" to="/Cover"><i class="fas fa-tachometer-alt"></i>Home</Link>
+              </li>
+             
+             
+              <li class="nav-item">
+                  <Link class="nav-link" href="javascript:void(0);"to="/Login"><i class="far fa-clone" ></i>Login</Link>
+              </li>
+              <li class="nav-item">
+                  <Link class="nav-link" href="javascript:void(0);" to="/Register"><i class="far fa-calendar-alt"></i>Registert</Link>
+              </li>
+              <li class="nav-item">
+                  <Link class="nav-link" href="javascript:void(0);" to="/schedule"><i class="far fa-chart-bar"></i>Schedular</Link>
+              </li>
+              <li class="nav-item">
+                  <Link class="nav-link" href="javascript:void(0);" to="/addappointment"><i class="far fa-copy"></i>Add Appointment</Link>
+              </li>
+              <li class="nav-item">
+                  <Link class="nav-link" href="javascript:void(0);"to="/login"><i class="far fa-copy"></i>Logout</Link>
+              </li>
+          </ul>
       </div>
-    </div>
-  
-   
-  </body>
-      
+  </nav> 
 
           )
 }
