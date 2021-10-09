@@ -53,8 +53,7 @@ const addappointment = () => {
             <div className='window '>
                 <div className='overlay'></div>
                 <div className='content'>
-                    <div className='welcome'>Hello There!</div>
-                    <div className='subtitle'>We're almost done. Before using our services you need to create an account.</div>
+                    <div className='welcome'>Schedule Your Tasks</div>
                     <div className='input-fields'>
                         <Formik
                             initialValues={addappointmentform}
@@ -72,13 +71,13 @@ const addappointment = () => {
                                     <input className="form-control" onChange={handleChange} value={values.id} name="id" placeholder="id" />
                                     <input className="form-control" onChange={handleChange} value={values.Location} name="Location" placeholder="Location" />
                                     {/* <input className="form-control" type="password" onChange={handleChange} value={values.password} name="password"placeholder="password" /> */}
-                                    <button className='ghost-round full-width'>Create Account</button>
+                                    <button className='ghost-round full-width'>Add Tasks</button>
                                 </form>
                             )}
                         </Formik>
 
                     </div>
-                    <div className='spacing'>or continue with <span className='highlight'>Facebook</span></div>
+                    {/* <div className='spacing'>or continue with <span className='highlight'>Facebook</span></div> */}
                     {/* <div></div> */}
                 </div>
             </div>
