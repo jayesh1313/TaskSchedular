@@ -66,6 +66,7 @@ const Login = () => {
         <div id="wrapper">
       <div id="left">
         <div id="signin">
+          <h1>Login </h1>
           {/* <div className="logo">
             <img src="https://rgs.health.wa.gov.au/_layouts/15/HDWA.RGS.SharePoint/img/loginIcon.png" alt="Sluralpright" />
           </div> */}
