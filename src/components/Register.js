@@ -73,7 +73,7 @@ const Signup = () => {
                             </Formik>
 
               </div>
-              <div className='spacing'>or continue with <span className='highlight'>Facebook</span></div>
+              {/* <div className='spacing'>or continue with <span className='highlight'>Facebook</span></div> */}
               {/* <div></div> */}
             </div>
           </div>

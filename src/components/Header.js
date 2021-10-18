@@ -59,7 +59,7 @@ export default function Header() {
                   <Link class="nav-link" href="javascript:void(0);"to="/Login"><i class="far fa-clone" ></i>Login</Link>
               </li>
               <li class="nav-item">
-                  <Link class="nav-link" href="javascript:void(0);" to="/Register"><i class="far fa-calendar-alt"></i>Registert</Link>
+                  <Link class="nav-link" href="javascript:void(0);" to="/Register"><i class="far fa-calendar-alt"></i>Register</Link>
               </li>
               <li class="nav-item">
                   <Link class="nav-link" href="javascript:void(0);" to="/schedule"><i class="far fa-chart-bar"></i>Schedular</Link>
@@ -68,7 +68,7 @@ export default function Header() {
                   <Link class="nav-link" href="javascript:void(0);" to="/addappointment"><i class="far fa-copy"></i>Add Appointment</Link>
               </li>
               <li class="nav-item">
-                  <Link class="nav-link" href="javascript:void(0);"to="/login"><i class="far fa-copy"></i>Logout</Link>
+                  {/* <Link class="nav-link" href="javascript:void(0);"to="/login"><i class="far fa-copy"></i>Logout</Link> */}
               </li>
           </ul>
       </div>

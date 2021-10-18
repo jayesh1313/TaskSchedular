@@ -31,8 +31,8 @@ const addappointment = () => {
                 if (data.message == 'success') {
                     Swal.fire({
                         icon: 'success',
-                        title: 'Registered!',
-                        text: 'Now Login to Continue'
+                        title: 'Task Added!',
+                        text: 'Now Go To Schedular '
                     })
                 } else {
                     Swal.fire({
